@@ -1,0 +1,53 @@
+{% extends 'Apps/base.html' %}
+{% block title %}Payments{% endblock %}
+
+{% block content %}
+<div class="payments-wrapper">
+    <h2 class="page-title">Payments</h2>
+
+    <div class="payments-container">
+        <table class="payments-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Order</th>
+                    <th>Method</th>
+                    <th>Amount</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+    <tr>
+        <td>1</td>
+        <td>#101</td>
+        <td>Credit Card</td>
+        <td>₹499.00</td>
+        <td>2025-07-17 18:20</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>#102</td>
+        <td>UPI</td>
+        <td>₹249.00</td>
+        <td>2025-07-17 18:45</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>#103</td>
+        <td>Cash</td>
+        <td>₹199.00</td>
+        <td>2025-07-17 19:05</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>#104</td>
+        <td>Net Banking</td>
+        <td>₹339.00</td>
+        <td>2025-07-17 19:30</td>
+    </tr>
+</tbody>
+
+        </table>
+    </div>
+</div>
+{% endblock %}

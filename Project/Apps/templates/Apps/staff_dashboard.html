@@ -1,0 +1,41 @@
+{% extends 'Apps/base.html' %}
+{% block title %}Staff Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard">
+  <h2>Welcome, Staff Member</h2>
+  <p>Track your shift, assigned kitchen, and tasks for today.</p>
+  <div class="info">
+    <div class="box">
+      Shift: <strong>10:00 AM - 6:00 PM</strong>
+    </div>
+    <div class="box">
+      Kitchen: <strong>Main Branch</strong>
+    </div>
+    <div class="box">
+      Today’s Tasks: <strong>5 pending</strong>
+    </div>
+  </div>
+</div>
+<style>
+.dashboard {
+  padding: 2rem;
+}
+.dashboard h2 {
+  font-size: 2rem;
+  color: #e67e22;
+}
+.info {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.box {
+  background: #f39c12;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+</style>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'Apps/base.html' %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard">
+  <h2>Welcome, Admin</h2>
+  <p>Manage the entire restaurant ecosystem including orders, staff, inventory, and payments.</p>
+  <div class="cards">
+    <div class="card">Total Orders: 520</div>
+    <div class="card">Total Staff: 23</div>
+    <div class="card">Revenue: ₹1,20,000</div>
+  </div>
+</div>
+<style>
+.dashboard {
+  padding: 2rem;
+}
+.dashboard h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: #3498db;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+</style>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'Apps/base.html' %}
+{% block title %}Menu{% endblock %}
+
+{% block content %}
+<div class="menu-container">
+    <h2>Menu Items</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Available</th>
+            </tr>
+        </thead>
+        <tbody>
+    <tr>
+        <td>1</td>
+        <td>Chicken Tikka</td>
+        <td>Tandoori Delight</td>
+        <td>₹249.00</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Paneer Butter Masala</td>
+        <td>Tandoori Delight</td>
+        <td>₹199.00</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Masala Dosa</td>
+        <td>Southern Spice</td>
+        <td>₹89.00</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Filter Coffee</td>
+        <td>Southern Spice</td>
+        <td>₹49.00</td>
+        <td>No</td>
+    </tr>
+</tbody>
+
+    </table>
+</div>
+{% endblock %}

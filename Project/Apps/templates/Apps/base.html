@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Restaurant Management{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+    /* Global Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f4f7f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #3c8dbc;
+        color: white;
+        padding: 15px 30px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    nav {
+        background-color: #2c3e50;
+        padding: 10px 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .container, .content-wrapper {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .page-title {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 25px;
+        border-bottom: 2px solid #3c8dbc;
+        display: inline-block;
+        padding-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    thead {
+        background-color: #3c8dbc;
+        color: white;
+        font-weight: bold;
+    }
+
+    th, td {
+        padding: 14px 16px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    .status, .payment {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+        color: white;
+    }
+
+    .status.delivered {
+        background-color: #2ecc71;
+    }
+
+    .status.pending {
+        background-color: #f39c12;
+    }
+
+    .status.cancelled {
+        background-color: #e74c3c;
+    }
+
+    .payment.paid {
+        background-color: #2ecc71;
+    }
+
+    .payment.unpaid {
+        background-color: #e67e22;
+    }
+
+    .payment.failed {
+        background-color: #c0392b;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="text"],
+    form input[type="number"],
+    form select {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s;
+    }
+
+    form input:focus {
+        border-color: #3c8dbc;
+        outline: none;
+    }
+
+    button {
+        background-color: #3c8dbc;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #3277a8;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        thead tr {
+            display: none;
+        }
+
+        td {
+            position: relative;
+            padding-left: 50%;
+            text-align: left;
+        }
+
+        td::before {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            width: 45%;
+            white-space: nowrap;
+            font-weight: bold;
+            color: #555;
+            content: attr(data-label);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        Restaurant Management System
+    </header>
+
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'orders' %}">Orders</a>
+        <a href="{% url 'menu' %}">Menu</a>
+        <a href="{% url 'inventory' %}">Inventory</a>
+        <a href="{% url 'payments' %}">Payments</a>
+        <a href="{% url 'staff' %}">Staff</a>
+        <a href="{% url 'brands' %}">Brands</a>
+        <a href="{% url 'kitchens' %}">Kitchens</a>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

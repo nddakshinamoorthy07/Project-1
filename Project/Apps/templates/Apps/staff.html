@@ -1,0 +1,53 @@
+ {% extends 'Apps/base.html' %}
+{% block title %}Staff{% endblock %}
+
+{% block content %}
+<div class="staff-wrapper">
+    <h2 class="page-title">Staff Assignments</h2>
+
+    <div class="staff-container">
+        <table class="staff-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Kitchen</th>
+                    <th>Skill</th>
+                    <th>Shift</th>
+                </tr>
+            </thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>Arjun Ravi</td>
+        <td>SpiceHub Central</td>
+        <td>Grilling</td>
+        <td>09:00 – 17:00</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Meera Krishnan</td>
+        <td>FlavorWorks</td>
+        <td>Pastry</td>
+        <td>13:00 – 21:00</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Hari Kumar</td>
+        <td>The Curry Station</td>
+        <td>North Indian Cuisine</td>
+        <td>07:00 – 15:00</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Keerthi Ram</td>
+        <td>South Street Kitchen</td>
+        <td>Inventory Management</td>
+        <td>11:00 – 19:00</td>
+    </tr>
+</tbody>
+
+        </table>
+    </div>
+</div>
+{% endblock %}

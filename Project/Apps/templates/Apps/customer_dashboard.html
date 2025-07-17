@@ -1,0 +1,42 @@
+{% extends 'Apps/base.html' %}
+{% block title %}Customer Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard">
+  <h2>Hello, Valued Customer!</h2>
+  <p>Browse the menu, place new orders, and view your order history.</p>
+  <div class="options">
+    <a href="/menu/" class="option">Browse Menu</a>
+    <a href="/orders/" class="option">My Orders</a>
+  </div>
+</div>
+<style>
+.dashboard {
+  padding: 2rem;
+  text-align: center;
+}
+.dashboard h2 {
+  color: #2ecc71;
+  font-size: 2rem;
+}
+.options {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.option {
+  background: #2ecc71;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.option:hover {
+  background: #27ae60;
+}
+</style>
+{% endblock %}

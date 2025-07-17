@@ -1,0 +1,49 @@
+{% extends 'Apps/base.html' %}
+{% block title %}Orders{% endblock %}
+
+{% block content %}
+<div class="orders-wrapper">
+  <h2 class="page-title">Order List</h2>
+
+  <div class="orders-container">
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Customer</th>
+          <th>Status</th>
+          <th>Total</th>
+          <th>Kitchen</th>
+          <th>Payment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Aryan Mehta</td>
+          <td><span class="status delivered">Delivered</span></td>
+          <td>₹450.00</td>
+          <td>Central Kitchen</td>
+          <td><span class="payment paid">Paid</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sana Ali</td>
+          <td><span class="status pending">Pending</span></td>
+          <td>₹299.00</td>
+          <td>East Side Kitchen</td>
+          <td><span class="payment unpaid">Unpaid</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Dev Singh</td>
+          <td><span class="status cancelled">Cancelled</span></td>
+          <td>₹0.00</td>
+          <td>West Wing</td>
+          <td><span class="payment failed">Failed</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
